@@ -1,3 +1,5 @@
+permissions: write-all
+
 name: Deploy to Public
 
 on:
@@ -23,7 +25,7 @@ jobs:
                 node-version: 21
                 cache: 'npm'
             
-            - name: Install dependencis
+            - name: Install dependencies
               run: yarn install
             
             - name: Build
