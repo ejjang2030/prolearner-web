@@ -2,7 +2,7 @@ name: Deploy to Public
 
 on:
     push:
-        branches: [ 'main' ]
+        branches: [ 'master' ]
     
 jobs:
     deploy:
@@ -23,7 +23,6 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: 20
-                cache: 'yarn'
             
             - name: Install dependencies
               run: yarn install
