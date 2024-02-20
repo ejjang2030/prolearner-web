@@ -12,11 +12,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-
+    "jsx": "react",
+    "baseUrl": ".", // baseUrl을 지정해줘야 paths를 설정할 수 있음
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@*": ["src/*"],
+    },
     /* Linting */
     "strict": true,
-    "noUnusedLocals": false, // deployment bug fix
+    "noUnusedLocals": false, // deployment bug fix Github Actions 배포 자동화 설정에서 안되는 에러가 있었음
     "noUnusedParameters": false, // deployment bug fix
     "noFallthroughCasesInSwitch": true
   },
