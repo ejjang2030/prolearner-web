@@ -1,0 +1,32 @@
+name: Deploy to Public
+
+on:
+    push:
+        branches: [ main ]
+    
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        concurrency:
+            group: ${{ github.workflow }}
+            cancel-in-progress: true
+
+        steps:
+            - name: Use repository source
+              uses: actions/checkout@v3
+            
+            - name: Use node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: 21
+                cache: 'npm'
+            
+            - name: Install dependencis
+              run: yarn install
+            
+            - name: Build
+              run: yarn 
+
+
