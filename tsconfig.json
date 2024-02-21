@@ -15,10 +15,7 @@
     "jsx": "react",
     "baseUrl": ".", // baseUrl을 지정해줘야 paths를 설정할 수 있음
     "paths": {
-      "*": [
-        "node_modules/*"
-      ],
-      "@*": ["src/*"],
+      "@/*": ["src/*"],
     },
     /* Linting */
     "strict": true,
