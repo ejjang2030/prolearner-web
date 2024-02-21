@@ -1,6 +1,10 @@
-export const LOGIN = '/login';
-export const DASHBOARD = '/';
-export const SIGN_UP = '/sign-up';
-export const PROFILE = '/profile/:username';
-export const NOT_FOUND = '/not-found';
-export const MESSAGES = '/messages/:userId';
+const Routes = {
+    LOGIN : '/login',
+    DASHBOARD : '/',
+    SIGN_UP : '/sign-up',
+    PROFILE : '/profile/:username',
+    NOT_FOUND : '/not-found',
+    MESSAGES : '/messages/:userId',
+};
+
+export default Routes;
