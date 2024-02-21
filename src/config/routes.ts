@@ -1,10 +1,12 @@
+const BASE_URL = '/prolearner-web';
+
 const Routes = {
-    LOGIN : '/login',
-    DASHBOARD : '/',
-    SIGN_UP : '/sign-up',
-    PROFILE : '/profile/:username',
-    NOT_FOUND : '/not-found',
-    MESSAGES : '/messages/:userId',
+    LOGIN : `${BASE_URL}/login`,
+    BASE : BASE_URL,
+    SIGN_UP : BASE_URL + '/sign-up',
+    PROFILE : BASE_URL + '/profile/:username',
+    NOT_FOUND : BASE_URL + '/not-found',
+    MESSAGES : BASE_URL + '/messages/:userId'
 };
 
 export default Routes;

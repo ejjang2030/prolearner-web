@@ -1,28 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
+    "target": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "useDefineForClassFields": true,
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "esModuleInterop": false,
     "noEmit": true,
     "jsx": "react",
     "baseUrl": ".", // baseUrl을 지정해줘야 paths를 설정할 수 있음
     "paths": {
-      "@/*": ["src/*"],
+      "*": [
+        "node_modules/*"
+      ],
+      "@*": ["src/*"],
     },
     /* Linting */
-    "strict": true,
     "noUnusedLocals": false, // deployment bug fix Github Actions 배포 자동화 설정에서 안되는 에러가 있었음
     "noUnusedParameters": false, // deployment bug fix
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  // "references": [{ "path": "./tsconfig.node.json" }],
+  // "include": ["vite.config.ts"]
 }

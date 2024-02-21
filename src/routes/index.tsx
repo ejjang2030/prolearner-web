@@ -1,38 +1,17 @@
-// import React, { lazy, FC } from "react";
-
-// import Dashboard from "@/pages/dashboard";
-// import LoginPage from "@/pages/login";
-// import LayoutPage from "@/pages/layout";
-// import WrapperRouteComponent from "./config";
-import { useRoutes, RouteObject } from "react-router-dom";
-
-// const NotFound = lazy(() => import('@/pages/404'));
-// const Project = lazy(() => import('@/pages/project'));
+import Routes from "../config/routes";
+import React, { lazy, FC } from "react";
+import { useRoutes, RouteObject } from 'react-router-dom';
+import NotFoundPage from '../pages/404';
 
 const routeList: RouteObject[] = [
-
   {
-    // path: "/",
-    // element: <WrapperRouteComponent auth={true} ><LayoutPage /></WrapperRouteComponent>,
-    // children: [
-    //   {
-    //     path: "/dashboard",
-    //     element: <WrapperRouteComponent><Dashboard /></WrapperRouteComponent>,
-    //   },
-    //   {
-    //     path: "/project/list",
-    //     element: <WrapperRouteComponent><Project /></WrapperRouteComponent>,
-    //   },
-    //   {
-    //     path: "*",
-    //     element: <WrapperRouteComponent><NotFound /></WrapperRouteComponent>,
-    //   },
-    // ],
+    path: Routes.LOGIN,
+    element: <>Login</>,
   },
-//   {
-//     path: "login",
-//     element: <LoginPage />,
-//   },
+  {
+    path: Routes.NOT_FOUND,
+    element: <NotFoundPage />
+  }
 ];
 
 const RenderRouter = () => {
