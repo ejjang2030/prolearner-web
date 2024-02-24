@@ -1,12 +1,12 @@
 import Routes from "../config/routes";
 import React, { lazy, FC } from "react";
 import { useRoutes, RouteObject } from 'react-router-dom';
-import NotFoundPage from '../pages/404';
+import { NotFoundPage, LoginPage } from '../pages/index';
 
 const routeList: RouteObject[] = [
   {
     path: Routes.LOGIN,
-    element: <>Login</>,
+    element: <LoginPage />,
   },
   {
     path: Routes.NOT_FOUND,
