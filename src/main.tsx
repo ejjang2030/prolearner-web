@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RecoilRoot } from "recoil";
 
-import "./index.css";
 import App from "./App";
 const queryClient = new QueryClient({
   defaultOptions: {
