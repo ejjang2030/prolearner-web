@@ -1,9 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { RecoilRoot } from "recoil";
+import React from 'react';
+import { createRoot } from 'react-dom/client'; // React 18에서 변경된 부분
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { RecoilRoot } from 'recoil';
 
-import App from "./App";
+import App from './App';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -17,11 +18,13 @@ const queryClient = new QueryClient({
   },
 });
 
-ReactDOM.render(
-    <QueryClientProvider client={queryClient}>
-      <RecoilRoot>
-        <App />
-      </RecoilRoot>
-    </QueryClientProvider>,
-  document.getElementById("root")
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <QueryClientProvider client={queryClient}>
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
+  </QueryClientProvider>
 );
