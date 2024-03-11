@@ -20,7 +20,7 @@
       "*": [
         "node_modules/*"
       ],
-      "@*": ["src/*"],
+      "@/*": ["src/*"],
     },
     /* Linting */
     "noUnusedLocals": false, // deployment bug fix Github Actions 배포 자동화 설정에서 안되는 에러가 있었음
